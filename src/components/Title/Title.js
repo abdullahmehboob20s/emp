@@ -1,5 +1,5 @@
-import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
+import useMediaQuery from "hooks/useMediaQuery";
 
 function Title({ title, className }) {
   const isBellow760px = useMediaQuery("(max-width : 760px)");

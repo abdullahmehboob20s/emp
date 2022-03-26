@@ -11,6 +11,7 @@ import video from "assets/images/video.mp4";
 import styles from "./HomePage.module.css";
 import useIntersectionObserver from "hooks/useIntersectionObserver";
 import CountdownTimer from "components/CountdownTimer/CountdownTimer";
+import Vision from "layouts/Vision/Vision";
 
 function HomePage() {
   const vidRef = React.useRef();
@@ -51,6 +52,9 @@ function HomePage() {
       </div>
       <div className="mb-100px">
         <Roadmap />
+      </div>
+      <div className="mb-150px">
+        <Vision />
       </div>
       <div className="mb-100px">
         <Team />

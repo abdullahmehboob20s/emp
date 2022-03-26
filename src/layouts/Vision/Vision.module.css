@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > :not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.logo > img:nth-child(1) {
+  width: 300px;
+}
+.logo > img:nth-child(2) {
+  width: 80px;
+}
+
+.section {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  /* border: 2px solid red; */
+}
+
+.left > :not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.right {
+  flex: 1;
+  /* border: 2px solid red; */
+}
+
+.right > :not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+/* CARD ===== */
+/* CARD ===== */
+/* CARD ===== */
+
+.card.reverse {
+  text-align: right;
+}
+
+.cardContent {
+  padding-right: 4rem;
+}
+
+.card.reverse .cardContent {
+  padding-right: 0rem;
+  padding-left: 4rem;
+}
+
+.lineWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0.1rem;
+  /* border: 2px solid white; */
+}
+
+.card.reverse .lineWrapper {
+  flex-direction: row-reverse;
+}
+
+.line {
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  background-color: var(--yellow);
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  /* margin-right: -13px; */
+}

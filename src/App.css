@@ -619,6 +619,26 @@ li {
   list-style-type: disc;
 }
 
+.list-style-type-none {
+  list-style-type: none;
+}
+.list-style-type-none li {
+  list-style: none;
+  list-style-type: none;
+}
+
+.list-style-type-decimal {
+  list-style-type: decimal;
+}
+.list-style-type-decimal li {
+  list-style-type: decimal;
+  list-style: decimal;
+}
+
+.list-style-position-inside {
+  list-style-position: inside;
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -733,7 +753,6 @@ li {
   }
 }
 
-
 /*
 nft minting css
 */
@@ -745,18 +764,16 @@ nft minting css
 
 @keyframes rotate {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-
-
 
 #connectWalletBtn {
   width: 33%;
