@@ -22,6 +22,18 @@
 
 .section {
   display: flex;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 100%;
+  background-color: var(--yellow);
 }
 
 .left {

@@ -1,0 +1,69 @@
+.section {
+  --margin: 1rem;
+  display: flex;
+  margin-right: calc(-1 * var(--margin));
+  margin-left: calc(-1 * var(--margin));
+}
+
+.card {
+  flex: 1;
+  margin-right: var(--margin);
+  margin-left: var(--margin);
+  padding-bottom: 5rem;
+}
+
+.card.reverse {
+  padding-bottom: 0;
+}
+
+.card.reverse .cardTitle {
+  padding-top: 5rem;
+}
+
+.cardTitle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -15%;
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+}
+
+.card.reverse .cardTitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+  z-index: -1;
+}
+
+.lineWrapper {
+  position: absolute;
+  top: 0.1em;
+  left: -20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card.reverse .lineWrapper {
+  display: none;
+}
+
+.card.reverse .lineWrapper {
+  flex-direction: column-reverse;
+  height: 100%;
+  /* top: -35%; */
+}
+
+.line {
+  height: 100%;
+  width: 2px;
+  background-color: white;
+}
