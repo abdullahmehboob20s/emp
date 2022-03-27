@@ -4,7 +4,7 @@ import styles from "./CountdownTimer.module.css";
 // import { TiMinus } from "react-icons/ti";
 import useMediaQuery from "hooks/useMediaQuery";
 import Title from "components/Title/Title";
-import Link from "react-scroll/modules/components/Link";
+import { Link } from "react-router-dom";
 
 const Counter = ({ count, title }) => {
   return (

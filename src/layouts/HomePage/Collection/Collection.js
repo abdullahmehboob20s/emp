@@ -20,7 +20,7 @@ import collectionPerson11 from "assets/images/collection/11.jpg";
 import collectionPerson12 from "assets/images/collection/12.jpg";
 import collectionPerson13 from "assets/images/collection/13.jpg";
 import collectionPerson14 from "assets/images/collection/14.jpg";
-import Link from "react-scroll/modules/components/Link";
+import { Link } from "react-router-dom";
 SwiperCore.use([Navigation, EffectCoverflow, Autoplay]);
 
 function Collection() {
