@@ -19,13 +19,13 @@ function HomePage() {
   const ref = React.useRef();
   const onScreen = useIntersectionObserver(ref);
 
-  useEffect(() => {
-    if (onScreen) {
-      vidRef.current.play();
-    } else {
-      vidRef.current.pause();
-    }
-  }, [onScreen]);
+  // useEffect(() => {
+  //   if (onScreen) {
+  //     vidRef.current.play();
+  //   } else {
+  //     vidRef.current.pause();
+  //   }
+  // }, [onScreen]);
 
   return (
     <div>
@@ -39,7 +39,7 @@ function HomePage() {
       <div className="mb-100px">
         <Collection />
       </div>
-      <div className="mb-100px">
+      <div className="mb-100px" id="story">
         <Story />
       </div>
       <div className="mb-100px">
@@ -51,16 +51,16 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="mb-100px">
+      <div className="mb-100px" id="roadmap">
         <Roadmap />
       </div>
-      <div className="mb-150px">
+      <div className="mb-150px" id="vision">
         <Vision />
       </div>
-      <div className="mb-100px">
+      <div className="mb-100px" id="whitelist">
         <WhiteListBenefits />
       </div>
-      <div className="mb-100px">
+      <div className="mb-100px" id="team">
         <Team />
       </div>
       <div className="bg-blue py-100px">

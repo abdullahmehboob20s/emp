@@ -1,4 +1,18 @@
-.section {
+.sectionWrapper {
+  position: relative;
+}
+.roadmapRoad {
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.aboveRoad,
+.bellowRoad {
   --margin: 1rem;
   display: flex;
   margin-right: calc(-1 * var(--margin));
@@ -9,16 +23,16 @@
   flex: 1;
   margin-right: var(--margin);
   margin-left: var(--margin);
-  padding-bottom: 5rem;
+  padding-bottom: 30vw;
 }
 
 .card.reverse {
   padding-bottom: 0;
 }
 
-.card.reverse .cardTitle {
-  padding-top: 5rem;
-}
+/* .card.reverse .cardTitle {
+  padding-top: 15vw;
+} */
 
 .cardTitle::before {
   content: "";
@@ -31,7 +45,7 @@
   background-color: var(--yellow);
 }
 
-.card.reverse .cardTitle::after {
+/* .card.reverse .cardTitle::after {
   content: "";
   position: absolute;
   top: 0;
@@ -40,12 +54,12 @@
   width: 2px;
   background-color: white;
   z-index: -1;
-}
+} */
 
 .lineWrapper {
   position: absolute;
   top: 0.1em;
-  left: -20px;
+  left: -11%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -63,7 +77,66 @@
 }
 
 .line {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 2px;
   background-color: white;
+}
+
+@media (max-width: 1000px) {
+  .roadmapRoad {
+    display: none;
+  }
+
+  .card {
+    padding-bottom: 0vw;
+  }
+
+  .section {
+    flex-direction: column !important;
+  }
+
+  .section:first-child {
+    margin-bottom: 0;
+  }
+
+  .section > :not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .cardTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  .cardTitle::before {
+    content: "";
+    position: static !important;
+    margin-right: 0.8rem;
+  }
+
+  .cardDisc {
+    padding-left: 2rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .lineWrapper {
+    left: 1.4%;
+  }
+
+  .card.reverse .lineWrapper {
+    display: block;
+  }
+
+  .lineWrapper:is(:last-child),
+  .card.reverse:is(:last-child) .lineWrapper {
+    display: none;
+  }
+
+  .sectionWrapper {
+    max-width: fit-content;
+    margin: 0 auto;
+  }
 }

@@ -4,6 +4,7 @@ import styles from "./CountdownTimer.module.css";
 // import { TiMinus } from "react-icons/ti";
 import useMediaQuery from "hooks/useMediaQuery";
 import Title from "components/Title/Title";
+import Link from "react-scroll/modules/components/Link";
 
 const Counter = ({ count, title }) => {
   return (
@@ -29,6 +30,8 @@ function CountdownTimer() {
   const [timerHours, setTimerHours] = useState("00");
   const [timerMinutes, setTimerMinutes] = useState("00");
   const [timerSeconds, setTimerSeconds] = useState("00");
+  const isBellow1000px = useMediaQuery("(max-width : 1000px)");
+
   let interval = useRef();
   const startTimer = () => {
     let end = new Date("4/2/2022 4:00 PM");
@@ -90,6 +93,21 @@ function CountdownTimer() {
           <Counter count={timerMinutes} title={isBellow ? "Min" : "Minutes"} />
           <Counter count={timerSeconds} title={isBellow ? "Sec" : `Seconds`} />
         </div>
+
+        <Link
+          to="/mint"
+          style={{
+            width: "100%",
+            justifyContent: "center",
+            maxWidth: "400px",
+          }}
+          className={`margin-center yellow-btn white uppercase weight-7 text-center w-fit-content mb-20px ${
+            isBellow1000px ? "fs-12px" : "fs-16px"
+          } pointer`}
+          id="navBar__walletBtn"
+        >
+          Mint Now
+        </Link>
 
         {/* <div className={`${styles.btns} mb-50px`}>
           <div

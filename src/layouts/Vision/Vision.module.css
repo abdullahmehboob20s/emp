@@ -7,17 +7,18 @@
 .logo {
   display: flex;
   align-items: center;
+  font-size: 100%;
 }
 
 .logo > :not(:last-child) {
-  margin-right: 1.5rem;
+  margin-right: 1.5em;
 }
 
 .logo > img:nth-child(1) {
-  width: 300px;
+  width: 20em;
 }
 .logo > img:nth-child(2) {
-  width: 80px;
+  width: 4em;
 }
 
 .section {
@@ -95,4 +96,90 @@
   border-radius: 50%;
   background-color: var(--yellow);
   /* margin-right: -13px; */
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    font-size: 70%;
+  }
+
+  .section::before {
+    width: 20px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .card.reverse {
+    text-align: left;
+  }
+
+  .card.reverse .lineWrapper {
+    flex-direction: row-reverse;
+  }
+
+  .lineWrapper {
+    flex-direction: row-reverse;
+  }
+
+  .card.reverse .cardContent {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  .cardContent {
+    padding-right: 0rem;
+  }
+
+  .left {
+    margin-bottom: 2rem;
+  }
+
+  .left > :not(:last-child),
+  .right > :not(:last-child) {
+    margin-bottom: 2rem !important;
+  }
+
+  .title {
+    padding-left: 2.5rem;
+  }
+
+  .cardContent,
+  .card.reverse .cardContent {
+    padding-left: 2.5rem;
+  }
+
+  .section::before {
+    left: 0%;
+    transform: translateX(0);
+    width: 12px;
+  }
+
+  .header {
+    flex-direction: column-reverse;
+    align-items: unset;
+  }
+
+  .header > :not(:last-child) {
+    margin-top: 1rem;
+  }
+
+  .logo {
+    font-size: 50%;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .logo > :not(:last-child) {
+    margin-right: 0em;
+    margin-left: 1.5em;
+  }
 }

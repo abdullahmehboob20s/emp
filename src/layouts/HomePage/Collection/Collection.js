@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import SwiperCore, { Navigation, EffectCoverflow, Autoplay } from "swiper";
@@ -21,12 +20,14 @@ import collectionPerson11 from "assets/images/collection/11.jpg";
 import collectionPerson12 from "assets/images/collection/12.jpg";
 import collectionPerson13 from "assets/images/collection/13.jpg";
 import collectionPerson14 from "assets/images/collection/14.jpg";
+import Link from "react-scroll/modules/components/Link";
 SwiperCore.use([Navigation, EffectCoverflow, Autoplay]);
 
 function Collection() {
   let navigationPrevRef = React.useRef(null);
   let navigationNextRef = React.useRef(null);
   const isBellow500px = useMediaQuery("(max-width : 500px)");
+  const isBellow1000px = useMediaQuery("(max-width : 1000px)");
 
   return (
     <div>
@@ -68,7 +69,7 @@ function Collection() {
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
           }}
-          className="collection-slider"
+          className="collection-slider mb-50px"
           style={{ padding: isBellow500px ? "0 10%" : "" }}
           breakpoints={{
             800: {
@@ -132,6 +133,23 @@ function Collection() {
             <img src={collectionPerson14} className="w-full" alt="" />
           </SwiperSlide>
         </Swiper>
+
+        <div className="container-wrapper">
+          <Link
+            to="/mint"
+            style={{
+              width: "100%",
+              justifyContent: "center",
+              maxWidth: "500px",
+            }}
+            className={`margin-center yellow-btn white uppercase weight-7 text-center w-fit-content mb-20px ${
+              isBellow1000px ? "fs-12px" : "fs-16px"
+            } pointer`}
+            id="navBar__walletBtn"
+          >
+            Mint Now
+          </Link>
+        </div>
       </Fade>
     </div>
   );

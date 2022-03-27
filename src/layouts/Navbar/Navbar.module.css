@@ -31,6 +31,60 @@
   margin-right: 30px;
 }
 
+.hamburger {
+  width: 40px;
+  cursor: pointer;
+}
+
+.menu {
+  z-index: 1000 !important;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #ffd366;
+  padding: 45px 57px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  transform: translateX(400px);
+  display: flex;
+  flex-direction: column;
+}
+
+.reactScroll {
+  transition: all 0.2s ease;
+}
+.reactScrollActive {
+  font-weight: 800;
+}
+
+.menu.open {
+  pointer-events: visible;
+  transform: translateX(0px);
+}
+
+.navbarLinks {
+  flex: 1;
+}
+
+.closeIcon {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socialIcon > :not(:last-child) {
+  margin-right: 1rem;
+}
+
 @media (max-width: 1000px) {
   .logo1 {
     width: 6vw;
@@ -60,6 +114,25 @@
     align-items: center;
     justify-content: center;
   }
+
+  .hamburger {
+    width: 25px;
+    cursor: pointer;
+  }
+
+  .menu {
+    z-index: 1000 !important;
+    position: fixed;
+    top: 0%;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #ffd366;
+    padding: 30px 30px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    transform: translateX(300px);
+  }
 }
 @media (max-width: 500px) {
   .logo1 {
@@ -74,8 +147,9 @@
   }
 
   .connectBtn {
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 0.6rem;
   }
 }
 @media (max-width: 380px) {

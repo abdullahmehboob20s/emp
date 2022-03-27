@@ -1,6 +1,7 @@
 import Title from "components/Title/Title";
 import React from "react";
 import styles from "./WhiteListBenefits.module.css";
+import roadmapRoad from "assets/images/roadmap-road.png";
 
 const Card = ({ title, desc, reverse = false }) => {
   return (
@@ -14,7 +15,9 @@ const Card = ({ title, desc, reverse = false }) => {
           {title}
         </h5>
       </div>
-      <div className="fs-14px white weight-4 lh-1_4">{desc}</div>
+      <div className={`${styles.cardDisc} fs-14px white weight-4 lh-1_4`}>
+        {desc}
+      </div>
     </div>
   );
 };
@@ -22,11 +25,13 @@ const Card = ({ title, desc, reverse = false }) => {
 function WhiteListBenefits() {
   return (
     <div>
-      <Title title="Whitelist Benefits" className="text-center mb-50px" />
+      <div className="container-wrapper">
+        <Title title="Whitelist Benefits" className="text-center mb-50px" />
+      </div>
 
-      <div className="">
+      <div className={styles.sectionWrapper}>
         <div className="container-wrapper">
-          <div className={`${styles.section}`}>
+          <div className={`${styles.section} ${styles.aboveRoad}`}>
             <Card
               title="Discount"
               desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
@@ -53,40 +58,42 @@ function WhiteListBenefits() {
             />
           </div>
         </div>
-      </div>
 
-      <div className="container-wrapper">
-        <div className={`${styles.section}`}>
-          <Card
-            reverse={true}
-            title="Discount"
-            desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
-          />
-          <Card
-            reverse={true}
-            title="Discount"
-            desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
-          />
-          <Card
-            reverse={true}
-            title="Discount"
-            desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
-          />
-          <Card
-            reverse={true}
-            title="Discount"
-            desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
-          />
-          <Card
-            reverse={true}
-            title="Discount"
-            desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
-          />
-          <Card
-            reverse={true}
-            title="Discount"
-            desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
-          />
+        <img src={roadmapRoad} className={styles.roadmapRoad} alt="" />
+
+        <div className="container-wrapper">
+          <div className={`${styles.section} ${styles.bellowRoad}`}>
+            <Card
+              reverse={true}
+              title="Discount"
+              desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
+            />
+            <Card
+              reverse={true}
+              title="Discount"
+              desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
+            />
+            <Card
+              reverse={true}
+              title="Discount"
+              desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
+            />
+            <Card
+              reverse={true}
+              title="Discount"
+              desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
+            />
+            <Card
+              reverse={true}
+              title="Discount"
+              desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
+            />
+            <Card
+              reverse={true}
+              title="Discount"
+              desc="Fugit et delectus explicabo labore, possimus repudiandae nam quaerat deserunt voluptatibus "
+            />
+          </div>
         </div>
       </div>
     </div>
