@@ -134,7 +134,7 @@ function Collection() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="container-wrapper">
+        {/* <div className="container-wrapper">
           <Link
             to="/mint"
             style={{
@@ -149,7 +149,7 @@ function Collection() {
           >
             Mint Now
           </Link>
-        </div>
+        </div> */}
       </Fade>
     </div>
   );
